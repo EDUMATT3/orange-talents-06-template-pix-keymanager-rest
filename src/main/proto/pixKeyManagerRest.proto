@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.pix.edumatt3";
+option java_outer_classname = "PixKeyManagerRest";
+option objc_class_prefix = "HLW";
+
+package br.com.pix.edumatt3;
+
+service PixKeyManagerRestService {
+  rpc send (PixKeyManagerRestRequest) returns (PixKeyManagerRestReply) {}
+}
+
+message PixKeyManagerRestRequest {
+  string name = 1;
+}
+
+message PixKeyManagerRestReply {
+  string message = 1;
+}
