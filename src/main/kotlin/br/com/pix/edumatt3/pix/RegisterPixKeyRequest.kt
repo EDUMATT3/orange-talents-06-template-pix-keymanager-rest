@@ -4,6 +4,7 @@ import br.com.edumatt3.AccountType
 import br.com.edumatt3.CreatePixKeyRequest
 import br.com.edumatt3.KeyType
 import io.micronaut.core.annotation.Introspected
+import javax.validation.constraints.Max
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
 
@@ -11,7 +12,7 @@ import javax.validation.constraints.NotNull
 class RegisterPixKeyRequest(
     @field:NotBlank val clientId: String,
     @field:NotNull val type: KeyType,
-    var key: String?,
+    @field:Max(77) val key: String?,
     @field:NotNull val accountType: AccountType,
 ){
     fun toGrpcRequest(): CreatePixKeyRequest {

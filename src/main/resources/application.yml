@@ -3,6 +3,7 @@ micronaut:
     name: pixKeyManagerRest
   server:
     context-path: ${BASE_PATH:api/pix}
+    port: ${SERVER_PORT:8080}
 
 grpc:
   client:
