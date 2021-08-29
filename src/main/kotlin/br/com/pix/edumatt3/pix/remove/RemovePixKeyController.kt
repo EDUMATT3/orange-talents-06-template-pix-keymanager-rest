@@ -11,7 +11,7 @@ import java.util.*
 import javax.validation.Valid
 
 @Validated
-@Controller("/key")
+@Controller("/keys")
 class RemovePixKeyController(val grpcClient: DeletePixKeyServiceBlockingStub) {
 
     private val logger = LoggerFactory.getLogger(this::class.java)

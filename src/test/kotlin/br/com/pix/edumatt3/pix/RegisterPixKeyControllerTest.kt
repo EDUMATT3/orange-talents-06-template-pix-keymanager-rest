@@ -51,7 +51,7 @@ internal class RegisterPixKeyControllerTest {
             accountType = AccountType.CONTA_CORRENTE
         )
 
-        val request = HttpRequest.POST("/api/pix/key", requestBody)
+        val request = HttpRequest.POST("/api/pix/keys", requestBody)
         val response = client.toBlocking().exchange(request, Any::class.java)
 
         with(response){
@@ -74,7 +74,7 @@ internal class RegisterPixKeyControllerTest {
             accountType = AccountType.CONTA_CORRENTE
         )
 
-        val request = HttpRequest.POST("/api/pix/key", requestBody)
+        val request = HttpRequest.POST("/api/pix/keys", requestBody)
         val thrown = assertThrows<HttpClientResponseException> {
             client.toBlocking().exchange(request, Any::class.java)
         }

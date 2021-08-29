@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory
 import javax.validation.Valid
 
 @Validated
-@Controller("/key")
+@Controller("/keys")
 class RegisterPixKeyController(@Inject val createKeyClient: CreatePixKeyServiceBlockingStub,) {
 
     private val logger = LoggerFactory.getLogger(this::class.java)
@@ -23,7 +23,7 @@ class RegisterPixKeyController(@Inject val createKeyClient: CreatePixKeyServiceB
 
         val response = createKeyClient.register(request.toGrpcRequest())
 
-        val location = HttpResponse.uri("/api/pix/key/${response.pixId}")
+        val location = HttpResponse.uri("/api/pix/keys/${response.pixId}")
         return HttpResponse.created(location)
     }
 }

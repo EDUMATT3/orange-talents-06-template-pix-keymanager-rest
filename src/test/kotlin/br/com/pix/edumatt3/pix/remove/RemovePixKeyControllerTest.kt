@@ -45,7 +45,7 @@ internal class RemovePixKeyControllerTest {
 
         given(grpcClient.delete(Mockito.any())).willReturn(Empty.newBuilder().build())
 
-        val request = HttpRequest.DELETE("/api/pix/key/${UUID.randomUUID().toString()}", RemovePixKeyRequest(UUID.randomUUID()))
+        val request = HttpRequest.DELETE("/api/pix/keys/${UUID.randomUUID().toString()}", RemovePixKeyRequest(UUID.randomUUID()))
 
         val status = client.toBlocking().exchange(request, Any::class.java).status
 
@@ -58,7 +58,7 @@ internal class RemovePixKeyControllerTest {
         val exception = Status.PERMISSION_DENIED.withDescription("pix key doesn't belong to the customer")
         given(grpcClient.delete(Mockito.any())).willThrow(StatusRuntimeException(exception))
 
-        val request = HttpRequest.DELETE("/api/pix/key/${UUID.randomUUID().toString()}", RemovePixKeyRequest(UUID.randomUUID()))
+        val request = HttpRequest.DELETE("/api/pix/keys/${UUID.randomUUID().toString()}", RemovePixKeyRequest(UUID.randomUUID()))
 
         val thrown = assertThrows<HttpClientResponseException> {
             client.toBlocking().exchange(request, Any::class.java)
@@ -76,7 +76,7 @@ internal class RemovePixKeyControllerTest {
         val exception = Status.FAILED_PRECONDITION.withDescription("pix key doesn't belong to the customer")
         given(grpcClient.delete(Mockito.any())).willThrow(StatusRuntimeException(exception))
 
-        val request = HttpRequest.DELETE("/api/pix/key/${UUID.randomUUID().toString()}", RemovePixKeyRequest(UUID.randomUUID()))
+        val request = HttpRequest.DELETE("/api/pix/keys/${UUID.randomUUID().toString()}", RemovePixKeyRequest(UUID.randomUUID()))
 
         val thrown = assertThrows<HttpClientResponseException> {
             client.toBlocking().exchange(request, Any::class.java)
