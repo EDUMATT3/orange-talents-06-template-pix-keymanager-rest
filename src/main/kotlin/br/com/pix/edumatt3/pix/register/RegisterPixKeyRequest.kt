@@ -1,4 +1,4 @@
-package br.com.pix.edumatt3.pix
+package br.com.pix.edumatt3.pix.register
 
 import br.com.edumatt3.AccountType
 import br.com.edumatt3.CreatePixKeyRequest

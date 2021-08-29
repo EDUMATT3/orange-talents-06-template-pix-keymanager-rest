@@ -1,4 +1,4 @@
-package br.com.pix.edumatt3.pix
+package br.com.pix.edumatt3.pix.register
 
 import br.com.edumatt3.CreatePixKeyServiceGrpc.CreatePixKeyServiceBlockingStub
 import io.micronaut.http.HttpResponse
