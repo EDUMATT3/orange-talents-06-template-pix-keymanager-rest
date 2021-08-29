@@ -3,7 +3,6 @@ package br.com.pix.edumatt3.pix.remove
 import br.com.edumatt3.DeletePixKeyRequest
 import io.micronaut.core.annotation.Introspected
 import java.util.*
-import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
 
 @Introspected
