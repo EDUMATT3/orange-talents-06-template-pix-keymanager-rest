@@ -1,11 +1,10 @@
-package br.com.pix.edumatt3.pix
+package br.com.pix.edumatt3.pix.register
 
 import br.com.edumatt3.AccountType
 import br.com.edumatt3.CreatePixKeyResponse
 import br.com.edumatt3.CreatePixKeyServiceGrpc
 import br.com.edumatt3.KeyType
 import br.com.pix.edumatt3.grpc.GrpcClientFactory
-import br.com.pix.edumatt3.pix.register.RegisterPixKeyRequest
 import io.grpc.Status
 import io.grpc.StatusRuntimeException
 import io.micronaut.context.annotation.Factory
